@@ -50,9 +50,10 @@ app.get('/numbers',async(req, res )=>{
     
     // Wait for all API requests to finish or timeout using Promise.all()
     const responses = await Promise.all(promises);
-  
+  console.log(responses);
     // Filter unique non-null responses
     responses.forEach(response => {
+
 
     response?.numbers.forEach(no=>{
         if (no && !uniqueResponses.includes(no)) {
